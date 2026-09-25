@@ -1,0 +1,12 @@
+services:
+  web:
+    image: ghcr.io/bindzo8in/gnrgold:latest
+    container_name: gnrgold
+    restart: unless-stopped
+
+    networks:
+      - web_network
+
+networks:
+  web_network:
+    external: true
